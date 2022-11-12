@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import codecs
 import time
 
-driver = webdriver.Chrome(executable_path="./webdriver/chromedriver.exe")
+driver = webdriver.Chrome(executable_path="./webdriver/chromedriver")
 
 
 
@@ -24,7 +24,6 @@ def main():
             print(good_title)
             goods_str = goods_str + good_title + "\n"
 
-        
 
 
         with codecs.open("parseRes.txt", "w", "utf-16") as stream:   # or utf-8
