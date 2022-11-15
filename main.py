@@ -20,7 +20,7 @@ def main():
         i=0
         for good in goods_arr:
 
-            good_title=good.find_elements(By.CSS_SELECTOR,'.goods-card__description span')[1].text
+            good_title=good.find_elements(By.CSS_SELECTOR,'.goods-card__description span')[0].text + ' / ' + good.find_elements(By.CSS_SELECTOR,'.goods-card__description span')[1].text
             good_price=good.find_element(By.CLASS_NAME,'goods-card__price-now').text
             good_url=good.find_element(By.CLASS_NAME, 'goods-card__container').get_attribute('href') #Поиск всей информации
 
